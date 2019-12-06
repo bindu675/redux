@@ -6,14 +6,14 @@ class Task2 extends Component {
     render() {
         return (
             <div>
-           
+             <a href="Task3">Task3</a>
                {this.props.a}
-               <td>{this.props.b}</td> 
+               {this.props.b} 
                
-               <td><button onClick={()=>this.props.updateA(this.props.b)}>Update A</button></td>
-                <td><button onClick={()=>this.props.updateB(this.props.a)}>Update B</button></td>
-                </tr>
-              </table>
+            <button onClick={()=>this.props.updateA(this.props.b)}>Update A</button>
+            <button onClick={()=>this.props.updateB(this.props.a)}>Update B</button>
+               
+             
             </div>
         );
     }

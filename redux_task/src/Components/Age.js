@@ -5,6 +5,7 @@ class Age extends Component {
 render() {
     return (
         <div>
+            <a href="task2">task2</a>
         <div>
             your age: <span>{this.props.age}</span>
         </div>
