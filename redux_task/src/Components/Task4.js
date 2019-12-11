@@ -6,6 +6,7 @@ class Task4 extends Component {
     render() {
         return (
           <div>
+             <a href ="Task5">Task5</a>
             <span>Number:{this.props.num}</span><br/>
             <button onClick={this.props.onadd}>+</button>
             <button onClick={this.props.onsub}>-</button>
