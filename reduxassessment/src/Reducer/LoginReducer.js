@@ -2,22 +2,27 @@ import *as ActionTypes from '../Action/type';
 
 const initialState = {
   username: ' ',
-  password:' '
-  // login:' ',
-  // register:' '
+  password:' ',
+  
+  
   }
   const reducer = (state = initialState, action) => {
-    if (!values.username) {
-      errors.firstName = 'Required'
-    } else if (values.username.length < 2) {
-      errors.username = 'Minimum be 2 characters or more'
-    }
+    switch (action.type) {
+      case ActionTypes.USERNAME:
+        return { ...state, username: 'USERNAME' };
+        
+        
 
-             
-      
+      case ActionTypes.PASSWORD:
+        return { ...state, password: 'PASSWORD' };
+       
+
+
+
+      default:
         return state;
     };
-  
+  }
 export default reducer;
 
 
