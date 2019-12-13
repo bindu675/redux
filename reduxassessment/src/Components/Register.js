@@ -33,6 +33,8 @@
 
 import React from 'react';
 import './Register.css';
+import BrowserHistory from "./Utils/BrowserHistory";
+
 
 class Register extends React.Component {
     constructor() {
@@ -131,6 +133,9 @@ class Register extends React.Component {
       });
       return formIsValid;
     }
+    onHandleClick(){
+      BrowserHistory.push("/Login");
+      }
     
   render() {
     return (
@@ -151,6 +156,7 @@ class Register extends React.Component {
         <input type="password" name="password" value={this.state.fields.password} onChange={this.handleChange} />
         <div className="errorMsg">{this.state.errors.password}</div>
         <input type="submit" className="button"  value="Register"/>
+        <button onClick={this.onHandleClick} className="button">Login</button>
         </form>
     </div>
 </div>
