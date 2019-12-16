@@ -1,31 +1,3 @@
-// import React, { Component } from 'react';
-// import { connect } from 'react-redux';
-// import {username,password} from '../Action/LoginAction';
-
-// class Login extends Component {
-//     render() {
-//         return (
-//             <div>
-//                 <label>UserName: </label>
-//                 <input type="text" name="username" placeholder="Username" onChange={this.props.name}></input><br/><br/>
-//                 <label>Password: </label>
-//                 <input type="text" name="password" placeholder="password" onChange={this.props.name}></input><br/><br/>
-//                 <button name="login">Login</button>
-//                 <button name="register">Register</button>
-//             </div>
-//         );
-//     }
-// }
-// const mapStoreToProps=(state)=>
-// {
-// const {username,password}=state.LoginReducer;
-// return {username,password};
-// }
-// export default connect(mapStoreToProps,{username,password})(Login);
-
-
-
-
 import React, { Component } from 'react';
 import './Login.css';
 import BrowserHistory from "./Utils/BrowserHistory";
@@ -65,7 +37,7 @@ export default class Login extends React.Component {
       this.setState({ passwordError, nameError });
       return false;
     }
-
+    BrowserHistory.push("/AllPost");
     return true;
   };
 
@@ -101,7 +73,7 @@ export default class Login extends React.Component {
        </div> 
       </form>
       <div className="container3">
-          <button type="submit">Login</button>
+          <button type="submit" onClick={this.validate}>Login</button>
       </div>
       </div>
       </div>

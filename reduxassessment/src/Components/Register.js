@@ -1,36 +1,3 @@
-// import React, { Component } from 'react';
-// import { connect } from 'react-redux';
-// import {firstname,secondname,username,Password,register} from '../Action/RegisterAction';
-
-
-// class Register extends Component {
-//     render() {
-//         return (
-//             <div>
-//                 <label>FirstName</label>
-//                 <input type="text" name="firstname" placeholder="FirstName" onChange={this.props.handleChange}></input>
-//                 <label>SecondName</label>
-//                 <input type="text" name="secondname" placeholder="SecondName" onChange={this.props.handleChange}></input>
-//                 <label>UserName</label>
-//                 <input type="text" name="username" placeholder="UserName" onChange={this.props.handleChange}></input>
-//                 <label>Password</label>
-//                 <input type="text" name="Password" placeholder="Password" onChange={this.props.handleChange}></input>
-//                 <button name="register" onChange={this.props.handleChange}>Register</button>
-//                 <button name="cancel" onChange={this.props.handleChange}>Cancel</button>
-//             </div>
-//         );
-//     }
-// }
-// const mapStoreToProps=(state)=>
-// {
-// const { firstname,secondname,username,Password,register}=state.RegisterReducer;
-// return {firstname,secondname,username,Password,register};
-// }
-// export default connect(mapStoreToProps,{firstname,secondname,username,Password,register})(Register);
-
-
-
-
 import React from 'react';
 import './Register.css';
 import BrowserHistory from "./Utils/BrowserHistory";
@@ -96,7 +63,6 @@ class Register extends React.Component {
       }
 
       if (typeof fields["emailid"] !== "undefined") {
-        //regular expression for email validation
         var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
         if (!pattern.test(fields["emailid"])) {
           formIsValid = false;

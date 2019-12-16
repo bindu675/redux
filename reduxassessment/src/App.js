@@ -7,11 +7,6 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 import AllPost from './Components/AllPost';
 import PostForm from './Components/PostForm';
 
-
-
-
-
-
 function App() {
   return (
     <div className="App">
